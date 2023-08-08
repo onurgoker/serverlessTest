@@ -6,7 +6,7 @@
     },
     "provider": {
       "name": "aws",
-      "runtime": "nodejs8.10",
+      "runtime": "nodejs18.x",
       "region": "eu-west-1",
       "stackName": "imageUploader",
       "iamRoleStatements": [
@@ -15,7 +15,7 @@
           "Action": [
             "s3:PutObject"
           ],
-          "Resource": "arn:aws:s3:::getting-started-lambda-example/*"
+          "Resource": "arn:aws:s3:::lambda-example-onurgoker/*"
         }
       ],
       "stage": "dev",
@@ -187,16 +187,16 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/ImageUploaderService/dev/1691525358970-2023-08-08T20:09:18.970Z/ImageUploaderService.zip"
+                "S3Key": "serverless/ImageUploaderService/dev/1691526877587-2023-08-08T20:34:37.587Z/ImageUploaderService.zip"
               },
               "Handler": "uploadImage.handler",
-              "Runtime": "nodejs8.10",
+              "Runtime": "nodejs18.x",
               "FunctionName": "ImageUploaderService-dev-UploadImage",
               "MemorySize": 1024,
               "Timeout": 6,
               "Environment": {
                 "Variables": {
-                  "Bucket": "getting-started-lambda-example"
+                  "Bucket": "lambda-example-onurgoker"
                 }
               },
               "Role": {
@@ -210,7 +210,7 @@
               "UploadImageLogGroup"
             ]
           },
-          "UploadImageLambdaVersionAOY4crUavCzc5QI4GhZv7K14Nzj1rY9An3Sa2zW5k0": {
+          "UploadImageLambdaVersionaI7aGJXZyH1rTVi61MhFvjUxoPd9fpKPj15DTJlyTU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
@@ -223,7 +223,7 @@
           "StorageBucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-              "BucketName": "getting-started-lambda-example"
+              "BucketName": "lambda-example-onurgoker"
             }
           }
         },
@@ -239,7 +239,7 @@
           "UploadImageLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UploadImageLambdaVersionAOY4crUavCzc5QI4GhZv7K14Nzj1rY9An3Sa2zW5k0"
+              "Ref": "UploadImageLambdaVersionaI7aGJXZyH1rTVi61MhFvjUxoPd9fpKPj15DTJlyTU"
             },
             "Export": {
               "Name": "sls-ImageUploaderService-dev-UploadImageLambdaFunctionQualifiedArn"
@@ -332,7 +332,7 @@
       "vpc": {}
     },
     "custom": {
-      "bucket": "getting-started-lambda-example"
+      "bucket": "lambda-example-onurgoker"
     },
     "pluginsData": {},
     "functions": {
@@ -347,15 +347,15 @@
           }
         ],
         "environment": {
-          "Bucket": "getting-started-lambda-example"
+          "Bucket": "lambda-example-onurgoker"
         },
         "name": "ImageUploaderService-dev-UploadImage",
         "package": {},
         "memory": 1024,
         "timeout": 6,
-        "runtime": "nodejs8.10",
+        "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "UploadImageLambdaVersionAOY4crUavCzc5QI4GhZv7K14Nzj1rY9An3Sa2zW5k0"
+        "versionLogicalId": "UploadImageLambdaVersionaI7aGJXZyH1rTVi61MhFvjUxoPd9fpKPj15DTJlyTU"
       }
     },
     "resources": {
@@ -363,7 +363,7 @@
         "StorageBucket": {
           "Type": "AWS::S3::Bucket",
           "Properties": {
-            "BucketName": "getting-started-lambda-example"
+            "BucketName": "lambda-example-onurgoker"
           }
         }
       },
@@ -391,7 +391,7 @@
     "artifact": "/Users/ONUR/Documents/GitHub/serverlessTest/.serverless/ImageUploaderService.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/ImageUploaderService/dev/1691525358970-2023-08-08T20:09:18.970Z",
+    "artifactDirectoryName": "serverless/ImageUploaderService/dev/1691526877587-2023-08-08T20:34:37.587Z",
     "artifact": "ImageUploaderService.zip"
   }
 }

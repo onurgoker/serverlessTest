@@ -3,10 +3,10 @@ service: ImageUploaderService
 
 # The `provider` block defines where your service will be deployed
 custom:
-  bucket: getting-started-lambda-example
+  bucket: lambda-example-onurgoker
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs18.x
   region: eu-west-1
   stackName: imageUploader
   iamRoleStatements:
