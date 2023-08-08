@@ -1,0 +1,23 @@
+{
+  "name": "serverlesstest",
+  "version": "1.0.0",
+  "description": "The purpose of this repository is to test serverless framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onurgoker/serverlessTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onurgoker/serverlessTest/issues"
+  },
+  "homepage": "https://github.com/onurgoker/serverlessTest#readme",
+  "dependencies": {
+    "jimp": "^0.22.10",
+    "uuid": "^9.0.0"
+  }
+}
