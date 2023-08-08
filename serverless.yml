@@ -1,0 +1,15 @@
+service: serverlessTest
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  function1:
+    handler: index.handler
+
+custom:
+  serverless-s3-cleaner:
+    buckets:
+    - test-bucket
